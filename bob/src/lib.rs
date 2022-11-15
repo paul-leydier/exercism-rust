@@ -5,14 +5,10 @@ pub fn reply(message: &str) -> &str {
     }
     let is_shout = cleaned.chars().any(|c| c.is_alphabetic()) && cleaned.to_uppercase() == cleaned;
     let is_question = cleaned.ends_with('?');
-    if is_question {
-        if is_shout {
-            return "Calm down, I know what I'm doing!";
-        }
-        return "Sure.";
-    }
-    if is_shout {
-        return "Whoa, chill out!";
-    }
-    "Whatever."
+    match (is_shout, is_question) {
+        (true, true) => "Calm down, I know what I'm doing!",
+        (true, _) => "Whoa, chill out!",
+        (_, true) => "Sure.",
+        _ => "Whatever."
+    } 
 }
