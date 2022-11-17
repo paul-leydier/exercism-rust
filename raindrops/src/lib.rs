@@ -15,6 +15,6 @@ pub fn raindrops(n: u32) -> String {
     result
 }
 
-fn is_factor(a: u32, b:u32) -> bool {
+fn is_factor(a: u32, b: u32) -> bool {
     a % b == 0
 }

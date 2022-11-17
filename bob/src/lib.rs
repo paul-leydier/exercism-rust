@@ -9,6 +9,6 @@ pub fn reply(message: &str) -> &str {
         (true, true) => "Calm down, I know what I'm doing!",
         (true, _) => "Whoa, chill out!",
         (_, true) => "Sure.",
-        _ => "Whatever."
-    } 
+        _ => "Whatever.",
+    }
 }

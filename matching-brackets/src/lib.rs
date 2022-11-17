@@ -4,7 +4,7 @@ pub fn brackets_are_balanced(string: &str) -> bool {
         if char == '[' || char == '(' || char == '{' {
             buffer.push(char);
         }
-        if char == ']' || char == ')' || char == '}'  {
+        if char == ']' || char == ')' || char == '}' {
             if buffer.is_empty() {
                 return false;
             }

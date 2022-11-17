@@ -1,10 +1,10 @@
 #[derive(Debug)]
-pub struct HighScores<'a>{
-    scores: &'a[u32],
+pub struct HighScores<'a> {
+    scores: &'a [u32],
 }
 
 impl<'a> HighScores<'a> {
-    pub fn new(scores: &'a[u32]) -> Self {
+    pub fn new(scores: &'a [u32]) -> Self {
         HighScores { scores }
     }
 
@@ -23,10 +23,6 @@ impl<'a> HighScores<'a> {
     pub fn personal_top_three(&self) -> Vec<u32> {
         let mut result = self.scores.to_vec();
         result.sort_unstable();
-        result.iter()
-            .rev()
-            .take(3)
-            .copied()
-            .collect()
+        result.iter().rev().take(3).copied().collect()
     }
 }

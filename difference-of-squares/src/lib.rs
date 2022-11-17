@@ -1,6 +1,5 @@
 pub fn square_of_sum(n: u32) -> u32 {
-    (1u32..=n).sum::<u32>()
-        .pow(2)
+    (1u32..=n).sum::<u32>().pow(2)
 }
 
 pub fn sum_of_squares(n: u32) -> u32 {

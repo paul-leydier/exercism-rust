@@ -4,7 +4,7 @@ pub fn nth(n: u32) -> u32 {
     while counter < n {
         guess += 1;
         if is_prime(guess) {
-            counter+=1;
+            counter += 1;
         }
     }
     guess
